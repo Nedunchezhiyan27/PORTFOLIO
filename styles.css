@@ -1,0 +1,293 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5e);
+    color: #fff;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(231, 5, 133, 0.2);
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background-animation.gif') no-repeat center center/cover;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.technical-images {
+    padding: 50px;
+    background: #160808;
+    color: #333;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.technical-images h2 {
+    font-size: 48px;
+    color: #1e90ff;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.image-scroll {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-scroll-content {
+    display: flex;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.image-item {
+    background: #bbb9b9;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.image-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-item:hover img {
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveCircles {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Projects */
+.project {
+    background: rgba(10, 219, 234, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background: #ff00ff;
+    transform: scale(1.08) rotate(1deg);
+    border-color: #ff00ff;
+    box-shadow: 0 20px 40px rgba(255, 0, 255, 0.5);
+
+}
+#feedback {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#feedback form input, #feedback form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#feedback button {
+    background: #00d4ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#feedback button:hover {
+    background: #ff00ff;
+    transform: scale(1.1);
+}
+#map {
+    width: 50%;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border: 5px solid #00d4ff;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+#map:hover {
+    transform: scale(1.08) rotate(2deg);
+    border-color: #ff00ff;
+    box-shadow: 0 20px 40px rgba(255, 0, 255, 0.5);
+}
+#contact a {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    background: linear-gradient(45deg, #00d4ff, #ff00ff);
+}
+
+#contact a:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff00ff, #00d4ff);
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
