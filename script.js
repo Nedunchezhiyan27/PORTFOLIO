@@ -22,15 +22,15 @@ function type() {
 
 document.addEventListener("DOMContentLoaded", type);
 
-/* Play Sound Effect on Click */
-document.addEventListener("click", function() {
-    let audio = new Audio("click.mp3");
+
+document.getElementById("feedback").addEventListener("click", function() {
+    let audio = new Audio("Click2.wav");
     audio.play();
 });
 
-/* Initialize Google Map */
+
 function initMap() {
-    let location = { lat: 12.9716, lng: 77.5946 };  // Update with your location
+    let location = { lat: 12.9716, lng: 77.5946 };  
     let map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
         center: location
